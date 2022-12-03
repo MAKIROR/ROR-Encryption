@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ROR_Encryption.MainPage"
+             BackgroundColor="White"
+             >
+
+    <ScrollView>
+        <VerticalStackLayout
+            
+            >
+            <HorizontalStackLayout
+                Spacing="10"
+                Padding="15,20,30,0"
+                >
+                <Button
+                x:Name="savekey"
+                Text="Save key"
+                Clicked="SaveKey"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                WidthRequest="160"
+                HeightRequest="50"
+                FontSize="18"
+                BackgroundColor="#2c2c2c"
+                TextColor="White"
+                />
+
+                <Button
+                x:Name="createkey"
+                Text="Create key"
+                Clicked="CreateKey"
+                HorizontalOptions="Center" 
+                VerticalOptions="Center"
+                WidthRequest="160"
+                HeightRequest="50"
+                FontSize="18"
+                BackgroundColor="#2c2c2c"
+                TextColor="White"
+                />
+            </HorizontalStackLayout>
+
+            <VerticalStackLayout
+                Spacing="25"
+                Padding="15,10"  
+                >
+                <Frame BorderColor="Gray"
+                       Padding="5,5"
+                       >
+                    <Entry x:Name="keybox"
+                    Placeholder="Enter your key(24)"
+                    FontSize="19"
+                    HeightRequest="50"
+                    CharacterSpacing="1"
+                    MaxLength="24"
+                    TextColor="Grey"
+                    IsTextPredictionEnabled="false"
+                    />
+                </Frame>
+
+                <HorizontalStackLayout>
+                    <Frame BorderColor="Gray"
+                         Padding="5,5">
+                        <Editor 
+                        x:Name="plaintext"
+                        Placeholder="Enter plaintext"
+                        HeightRequest="180" 
+                        WidthRequest="260"
+                        FontSize="15"
+                        TextColor="Grey"
+                    />
+                    </Frame>
+                    <VerticalStackLayout
+                        Padding="10,0"
+                        HorizontalOptions="Center" 
+                        VerticalOptions="Center"
+                        Spacing="6"
+                        >
+                        <Button
+                            x:Name="copyplaintext"
+                            Text="Copy"
+                            Clicked="CopyPlainText"
+                            HorizontalOptions="Center" 
+                            VerticalOptions="Center"
+                            HeightRequest="56"
+                            WidthRequest="80"
+                            FontSize="18"
+                            BackgroundColor="#2c2c2c"
+                            TextColor="White"
+                        />
+                        <Button
+                            x:Name="pasteplaintext"
+                            Text="Paste"
+                            Clicked="PastePlainText"
+                            HorizontalOptions="Center" 
+                            VerticalOptions="Center"
+                            HeightRequest="56"
+                            WidthRequest="80"
+                            FontSize="18"
+                            BackgroundColor="#2c2c2c"
+                            TextColor="White"
+                        />
+                        <Button
+                            x:Name="cleanplaintext"
+                            Text="Clear"
+                            Clicked="CleanPlainText"
+                            HorizontalOptions="Center" 
+                            VerticalOptions="Center"
+                            HeightRequest="56"
+                            WidthRequest="80"
+                            FontSize="18"
+                            BackgroundColor="#2c2c2c"
+                            TextColor="White"
+                        />
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout
+                    Spacing="15"
+                    VerticalOptions="Center"
+                    >
+                    <Button
+                        x:Name="encrypt"
+                        Text="Encrypt ⇩"
+                        Clicked="Encrypt"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        WidthRequest="160"
+                        HeightRequest="50"
+                        FontSize="18"
+                        BackgroundColor="#2c2c2c"
+                        TextColor="White"
+                        />
+
+                    <Button
+                        x:Name="decrypt"
+                        Text="⇧ Decrypt"
+                        Clicked="Decrypt"
+                        HorizontalOptions="Center" 
+                        VerticalOptions="Center"
+                        WidthRequest="160"
+                        HeightRequest="50"
+                        FontSize="18"
+                        BackgroundColor="#2c2c2c"
+                        TextColor="White"
+                    />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <VerticalStackLayout
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Spacing="6"
+                        Padding="0,0,10,0"
+                        >
+                        <Button
+                            x:Name="copyciphertext"
+                            Text="Copy"
+                            Clicked="CopyCipherText"
+                            HorizontalOptions="Center" 
+                            VerticalOptions="Center"
+                            HeightRequest="56"
+                            WidthRequest="80"
+                            FontSize="18"
+                            BackgroundColor="#2c2c2c"
+                            TextColor="White"
+                        />
+                        <Button
+                            x:Name="pasteciphertext"
+                            Text="Paste"
+                            Clicked="PasteCipherText"
+                            HorizontalOptions="Center" 
+                            VerticalOptions="Center"
+                            HeightRequest="56"
+                            WidthRequest="80"
+                            FontSize="18"
+                            BackgroundColor="#2c2c2c"
+                            TextColor="White"
+                        />
+                        <Button
+                            x:Name="cleanciphertext"
+                            Text="Clear"
+                            Clicked="CleanCipherText"
+                            HorizontalOptions="Center" 
+                            VerticalOptions="Center"
+                            HeightRequest="56"
+                            WidthRequest="80"
+                            FontSize="18"
+                            BackgroundColor="#2c2c2c"
+                            TextColor="White"
+                        />
+                    </VerticalStackLayout>
+                    <Frame BorderColor="Gray"
+                        Padding="5,5"
+                        >
+                        <Editor 
+                        x:Name="ciphertext"
+                        Placeholder="Enter ciphertext"
+                        HeightRequest="180" 
+                        WidthRequest="260"
+                        FontSize="15"
+                        TextColor="Grey"
+                        />
+                    </Frame>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
